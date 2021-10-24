@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Blog from './componentes/Blog';
 
+const myPosts = [
+  {
+    imagem: "https://images.pexels.com/photos/3880017/pexels-photo-3880017.jpeg",
+    autor: "Márcio Santos",
+    titulo: "Escalando...",
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut faucibus semper ex, et sagittis mauris lobortis eu. Nulla ex ipsum,varius a mattis quis, ultricies non leo. Fusce aliquam lorem sit ame ullamcorper pulvinar."
+  },
+  {
+    imagem: "https://images.pexels.com/photos/2748019/pexels-photo-2748019.jpeg",
+    autor: "Rosana Marques",
+    titulo: "Lindo passeio",
+    texto: "Donec elit turpis, luctus at orci et, commodo laoreet tortor. Donec et quam euismod, mollis mauris id, congue ipsum."
+  },
+  {
+    imagem:
+      "https://images.pexels.com/photos/3722888/pexels-photo-3722888.jpeg",
+    autor: "Beatriz Gomes",
+    titulo: "Muito Romântico",
+    texto: "Quisque eros ligula, tempus id ultrices sed, ultricies sed lorem. Maecenas turpis lectus, finibus a semper ac, vulputate id dui."
+  }
+]
+const elemento = document.getElementById('root');
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <Blog posts={myPosts} />
+  , elemento);
